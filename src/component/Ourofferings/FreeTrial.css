@@ -1,0 +1,86 @@
+.free-trial-bg {
+  background-color: #fbefe6; /* Light gray background */
+  width: 100%; /* Full width */
+}
+.free-trial-section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 38px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.trial-btn {
+  background-color: #e71c3a;
+  color: white;
+  font-size: 18px;
+  padding-top: 10%;
+  padding: 10px 40px;
+  margin-top: 10%; /* Added margin before the button */
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.trial-btn:hover {
+  background-color: #0056b3;
+}
+
+.requirements-list {
+  list-style: none;
+  margin-top: 5%;
+  padding: 0;
+  font-size: 16px;
+  text-align: left;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.requirements-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.requirements-list li span {
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+.free-trial-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+.free-trial-column > p {
+  font-size: 16px;
+  color: #6b6464;
+}
+
+.trial-image {
+  width: 100%;
+  max-width: 200px;
+  height: 100px;
+
+  border-radius: 10px;
+}
+
+hr {
+  width: 80%;
+  border: 1px solid #ddd;
+  margin: 15px 0;
+}
+
+p {
+  font-size: 16px;
+  color: #333;
+}

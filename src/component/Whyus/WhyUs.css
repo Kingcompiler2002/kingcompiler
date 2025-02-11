@@ -1,0 +1,29 @@
+.why-us-section {
+  margin-top: 50px;
+}
+
+.why-us-col {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.why-us-card {
+  width: 100%;
+  max-width: 200px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.why-us-card:hover {
+  transform: scale(1.05);
+}
+
+.why-us-img {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+}

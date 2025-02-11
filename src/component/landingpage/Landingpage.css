@@ -1,0 +1,68 @@
+.dropdown-title {
+  font-size: 1.4rem; /* Adjust size as needed */
+  font-weight: bold; /* Optional: make it bold */
+}
+.img-fluid {
+  padding-top: 4%;
+}
+@media (max-width: 768px) {
+  .landing-page {
+    padding-top: 70px; /* Increased padding for mobile */
+  }
+}
+
+.btn-mobile {
+  background-color: #e71c3a;
+  color: white;
+  font-weight: bold;
+  width: 300px;
+  margin: auto;
+  font-size: larger;
+  display: none;
+  margin-bottom: 3%;
+  border-radius: 6%;
+  padding-bottom: 2%;
+  padding-top: 2%;
+}
+@media (max-width: 768px) {
+  .mobile-only-btn {
+    display: block; /* Visible on mobile */
+  }
+}
+
+.btn {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.btn:hover {
+  transform: scale(1.08); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+/* Hover Effect */
+
+.btn-mobile:hover {
+  transform: scale(1.08); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-container {
+  width: 500px; /* Fixed width for carousel */
+  height: 500px; /* Fixed height */
+  margin: 20px auto 0;
+  border-radius: 10px; /* Optional rounded corners */
+  overflow: hidden; /* Hide overflow content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+  .carousel-container {
+    width: 100%; /* Full width on mobile */
+    height: auto; /* Adjust height automatically */
+  }
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for captions */
+  padding: 10px;
+  border-radius: 5px;
+}
