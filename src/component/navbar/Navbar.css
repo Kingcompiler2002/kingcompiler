@@ -1,6 +1,19 @@
 .leftmenu {
   padding-left: 20%;
 }
+#courses-dropdown {
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #786349;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+#courses-dropdown .dropdown-menu {
+  min-width: 150px;
+}
 
 .custom-nav-btn:hover {
   background-color: black;
@@ -10,6 +23,7 @@
 }
 .custom-nav-btn {
   color: black;
+  font-size: 16px;
 }
 /* Responsive adjustments for smaller screens */
 @media (max-width: 992px) {
@@ -25,4 +39,22 @@
   .navbar-nav .nav-link {
     padding: 10px 0; /* Adjust spacing for mobile */
   }
+}
+
+.dropdown-title {
+  font-size: 14px;
+  display: inline;
+
+  align-items: center;
+}
+
+.nav-dropdown-item {
+  font-weight: bold;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease-in-out;
+}
+
+.nav-dropdown-item:hover {
+  border-bottom: 2px solid #f6c61a; /* Change color as needed */
 }

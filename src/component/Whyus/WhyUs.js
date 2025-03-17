@@ -6,27 +6,27 @@ const whyUsData = [
   {
     id: 1,
     title: "Expert Mentors",
-    image: "https://via.placeholder.com/100",
+    image: "https://i.postimg.cc/4yWT0hxQ/why-1.png",
   },
   {
     id: 2,
     title: "Champion Students",
-    image: "https://via.placeholder.com/100",
+    image: "https://i.postimg.cc/3Jwhv9tS/why-2.png",
   },
   {
     id: 3,
-    title: "Flexible Learning",
-    image: "https://via.placeholder.com/100",
+    title: "Live and Interactive Classes",
+    image: "https://i.postimg.cc/PrFjzZct/why-3.png",
   },
   {
     id: 4,
     title: "Personalized Learning Plans",
-    image: "https://via.placeholder.com/100",
+    image: "https://i.postimg.cc/0yMqtjR7/why-4.png",
   },
   {
     id: 5,
-    title: "24/7 Support",
-    image: "Safe Environment for Students",
+    title: "Safe Environment for Students",
+    image: "https://i.postimg.cc/t4KG8bpw/why-5.png",
   },
 ];
 

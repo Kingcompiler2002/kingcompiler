@@ -1,47 +1,58 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal } from "react-bootstrap";
+import { Link } from "react-router-dom"; // Import Link
 
 const courses = [
   {
     id: 1,
-    title: "React Basics",
+    title: "Chess",
     image: "https://picsum.photos/300/200",
     videoUrl: "https://www.youtube.com/embed/lxIFwQ6GaZI?si=BGvJwBsXLScgEZqU",
-    description: "Learn the fundamentals of React and build interactive UIs.",
+    desctitle:
+      "Chess: Sharpening young minds with strategy, focus, and problem-solving! ♟️🧠✨",
+    description:
+      "Chess Course offers a structured, interactive learning experience with AI insights, expert coaching, puzzles, tournaments, and an extensive e-book library to help players master chess. ♟️🔥",
     price: "$99",
-    ageGroup: "12+",
+    ageGroup: "5+",
     duration: "4 Weeks",
     format: "Online",
   },
   {
     id: 2,
-    title: "JavaScript Essentials",
+    title: "Coding for Kids",
     image: "https://picsum.photos/300/200?random=2",
     videoUrl: "https://www.youtube.com/embed/lxIFwQ6GaZI?si=BGvJwBsXLScgEZqU",
-    description: "Master JavaScript, the backbone of modern web development.",
+    desctitle:
+      "Coding for Kids: Ignite Creativity, Logic & Future Skills! 💡💻🚀",
+    description:
+      "makes learning fun with interactive lessons, game development, hands-on coding, AI & robotics exploration, and teamwork-based projects to build creativity, logic, and future-ready skills! 💡",
     price: "$89",
-    ageGroup: "10+",
+    ageGroup: "8+",
     duration: "6 Weeks",
-    format: "Online & Offline",
+    format: "Online",
   },
   {
     id: 3,
-    title: "Next.js for Beginners",
+    title: "Web Development",
     image: "https://picsum.photos/300/200?random=3",
     videoUrl: "https://www.youtube.com/embed/lxIFwQ6GaZI?si=BGvJwBsXLScgEZqU",
-    description: "Dive into Next.js and build fast, server-side rendered apps.",
+    desctitle: "Web Development: Build, Design & Innovate! 🌐💻🚀",
+    description:
+      "Web Development Course: Learn front-end, back-end, and full-stack development through hands-on projects, responsive design, real-world applications, API integrations, and database management! 🌐",
     price: "$119",
-    ageGroup: "15+",
+    ageGroup: "10+",
     duration: "5 Weeks",
     format: "Online",
   },
   {
     id: 4,
-    title: "Node.js & Express",
+    title: "Graphic Design",
     image: "https://picsum.photos/300/200?random=4",
     videoUrl: "https://www.youtube.com/embed/lxIFwQ6GaZI?si=BGvJwBsXLScgEZqU",
-    description: "Explore backend development with Node.js and Express.",
+    desctitle: "Graphic Design: Creativity Meets Visual Impact! 🎨✨",
+    description:
+      "Graphic Design Course: Master design fundamentals, branding, UI/UX, and digital creativity using Photoshop, Illustrator, Canva, and real-world projects! 🎨✨🚀",
     price: "$129",
     ageGroup: "14+",
     duration: "6 Weeks",
@@ -49,21 +60,26 @@ const courses = [
   },
   {
     id: 5,
-    title: "Python for Beginners",
+    title: "Creative Writing",
     image: "https://picsum.photos/300/200?random=5",
     videoUrl: "https://www.youtube.com/embed/lxIFwQ6GaZI?si=BGvJwBsXLScgEZqU",
-    description: "Start programming with Python and learn the basics.",
+    desctitle: "Creative Writing: Where Imagination Meets Words! ✍️✨📖",
+
+    description:
+      "Creative Writing Course: Master storytelling, enhance creativity, and craft compelling content through fiction, poetry, and real-world writing projects! ✍️📖✨",
     price: "$79",
     ageGroup: "10+",
     duration: "5 Weeks",
-    format: "Offline",
+    format: "Online",
   },
   {
     id: 6,
-    title: "Machine Learning Basics",
+    title: "Art & Craft",
     image: "https://picsum.photos/300/200?random=6",
     videoUrl: "https://www.youtube.com/embed/lxIFwQ6GaZI?si=BGvJwBsXLScgEZqU",
-    description: "Learn the basics of machine learning and AI applications.",
+    desctitle: "Art & Craft: Create, Imagine, Inspire! 🎨✨✂️",
+    description:
+      "Art & Craft Course: Spark creativity with hands-on projects, painting, DIY crafts, and design techniques while exploring artistic expression, enhancing fine motor skills, and building a unique creative portfolio! 🎨✨✂️🚀",
     price: "$149",
     ageGroup: "16+",
     duration: "8 Weeks",
@@ -99,40 +115,61 @@ const Course = () => {
               />
               <div className="card-body">
                 <div className="d-flex justify-content-between align-items-center">
-                  <h5 className="card-title">{course.title}</h5>
+                  <h5 style={{ fontWeight: "bold" }} className="card-title">
+                    {course.title}
+                  </h5>
                   <button
-                    className="btn btn-dark btn-sm"
+                    style={{
+                      backgroundColor: "#786349",
+                      color: "white",
+                      fontWeight: "bold",
+                    }}
+                    className="btn  btn-sm"
                     onClick={() => handleShow(course.videoUrl)}
                   >
                     ▶ Play
                   </button>
                 </div>
-                <p className="card-text">{course.description}</p>
+
+                <h6
+                  style={{ marginTop: "6px", fontStyle: "italic" }}
+                  className="card-text"
+                >
+                  {course.desctitle}
+                </h6>
+                <p
+                  style={{
+                    fontStyle: "italic",
+                    fontWeight: "bolder",
+                    fontSize: "14px",
+                    color: "grey",
+                  }}
+                  className="card-text"
+                >
+                  {course.description}
+                </p>
                 <ul className="list-unstyled">
                   <li>
-                    <strong>Price:</strong> {course.price}
-                  </li>
-                  <li>
                     <strong>Age Group:</strong> {course.ageGroup}
-                  </li>
-                  <li>
-                    <strong>Duration:</strong> {course.duration}
                   </li>
                   <li>
                     <strong>Format:</strong> {course.format}
                   </li>
                 </ul>
-                <button className="btn btn-danger w-100">
+                <button
+                  style={{
+                    backgroundColor: "#f6c61a",
+                    color: "black",
+                    fontWeight: "bold",
+                  }}
+                  className="btn btn-warning w-100"
+                >
                   Book Free Trial
                 </button>
-                <h5
-                  style={{
-                    textAlign: "center",
-                    paddingTop: "2%",
-                    color: "red",
-                  }}
-                >
-                  View details
+                <h5 className="text-center mt-2">
+                  <Link to={`/course/${course.id}`} className="text-danger">
+                    View details
+                  </Link>
                 </h5>
               </div>
             </div>
@@ -146,11 +183,11 @@ const Course = () => {
           <div className="ratio ratio-16x9">
             <iframe
               width="100%"
-              height="400"
+              height="700"
               src={activeVideo}
               title="Course Video"
               frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="autoplay; encrypted-media"
               allowFullScreen
             ></iframe>
           </div>

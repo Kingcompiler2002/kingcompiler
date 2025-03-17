@@ -12,11 +12,8 @@ const LandingPage = () => {
     <div className="container">
       <div
         className="row align-items-center landing-page "
-        style={{ minHeight: "70vh", marginTop: "10px" }}
+        style={{ minHeight: "70vh", marginTop: "20px" }}
       >
-        <button className="mobile-only-btn btn-mobile">
-          Take a Free Trial Class!
-        </button>
         {/* Left Side: Title and Button */}
         <div className="col-md-6 text-center text-md-start">
           <h1 className="display-2 fw-bold">
@@ -32,7 +29,7 @@ const LandingPage = () => {
             </h4>
           </p>
           <button
-            style={{ backgroundColor: "#EEB920" }}
+            style={{ backgroundColor: "#FFC10E" }}
             className="btn  btn-lg"
           >
             <h3 style={{}}>Take a Free Trial Class!</h3>

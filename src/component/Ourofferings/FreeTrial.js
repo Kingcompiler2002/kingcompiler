@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import "./FreeTrial.css"; // Import custom styles
 import group from "../../assets/group.png";
 import one from "../../assets/one.png";
+import groupgif from "../../assets/group.gif";
 
 const FreeTrial = () => {
   return (
@@ -26,7 +27,7 @@ const FreeTrial = () => {
 
           {/* Second Column - Image + HR + Description */}
           <Col md={4} className="free-trial-column">
-            <img src={group} alt="Group Class" className="trial-image" />
+            <img src={groupgif} alt="Group Class" className="trial-image" />
             <h4>Group Class</h4>
             <hr />
             <p>

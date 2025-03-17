@@ -1,88 +1,52 @@
 import React from "react";
-import { Carousel, Card, Container, Row, Col } from "react-bootstrap";
-import "./Testimonials.css"; // Import custom styling
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "./Testimonials.css"; // Import CSS file
 
 const testimonials = [
-  {
-    id: 1,
-    name: "Alice Johnson",
-    image: "https://via.placeholder.com/100",
-    review: "This service is amazing! Highly recommended.",
-  },
-  {
-    id: 2,
-    name: "John Doe",
-    image: "https://via.placeholder.com/100",
-    review: "A game-changer for our business. Loved it!",
-  },
-  {
-    id: 3,
-    name: "Sophia Brown",
-    image: "https://via.placeholder.com/100",
-    review: "Fantastic experience! Great customer support.",
-  },
-  {
-    id: 4,
-    name: "Michael Lee",
-    image: "https://via.placeholder.com/100",
-    review: "Highly professional and efficient. 5 stars!",
-  },
-  {
-    id: 5,
-    name: "Emma Wilson",
-    image: "https://via.placeholder.com/100",
-    review: "Absolutely wonderful! Will use again.",
-  },
-  {
-    id: 6,
-    name: "James Anderson",
-    image: "https://via.placeholder.com/100",
-    review: "The best service ever! Highly satisfied.",
-  },
+  { id: 1, image: "https://i.postimg.cc/D07Qm96z/img-1.png" },
+  { id: 2, image: "https://i.postimg.cc/gjcRGvcX/2.png" },
+  { id: 3, image: "https://i.postimg.cc/5tcCXcNM/3.png" },
+  { id: 4, image: "https://i.postimg.cc/MGyjRsvf/4.png" },
+  { id: 5, image: "https://i.postimg.cc/PxypVPbt/5.png" },
+  { id: 5, image: "https://i.postimg.cc/Wp9qMqb8/6.png" },
+  { id: 1, image: "https://i.postimg.cc/wBVjgn12/7.png" },
+  { id: 2, image: "https://i.postimg.cc/W31b3Srv/8.png" },
+  { id: 3, image: "https://i.postimg.cc/prg2sHSW/9.png" },
+  { id: 4, image: "https://i.postimg.cc/FHb9VwVv/10.png" },
 ];
 
-const chunkArray = (arr, size) => {
-  return arr.reduce((chunks, item, index) => {
-    const chunkIndex = Math.floor(index / size);
-    if (!chunks[chunkIndex]) {
-      chunks[chunkIndex] = [];
-    }
-    chunks[chunkIndex].push(item);
-    return chunks;
-  }, []);
-};
-
-const Testimonials = () => {
-  const groupedTestimonials = chunkArray(testimonials, 3); // Groups of 3
-
+const TestimonialCarousel = () => {
   return (
-    <Container className="testimonials-section">
-      <h2 className="text-center mb-4">Our Award Winning Students!</h2>
-      <Carousel interval={1000} pause={false}>
-        {groupedTestimonials.map((group, index) => (
-          <Carousel.Item key={index}>
-            <Row className="justify-content-center">
-              {group.map((testimonial) => (
-                <Col md={4} key={testimonial.id} className="testimonial-col">
-                  <Card className="testimonial-card">
-                    <Card.Img
-                      variant="top"
-                      src={testimonial.image}
-                      className="testimonial-img"
-                    />
-                    <Card.Body>
-                      <Card.Title>{testimonial.name}</Card.Title>
-                      <Card.Text>"{testimonial.review}"</Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              ))}
-            </Row>
-          </Carousel.Item>
-        ))}
-      </Carousel>
-    </Container>
+    <div className="testimonial-container">
+      <h2 className="testimonial-heading">Our Achievers</h2>
+      <div className="testimonial-wrapper">
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          autoplay={{ delay: 1000, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          loop={true}
+          breakpoints={{
+            320: { slidesPerView: 1, spaceBetween: 5 }, // Mobile: Minimum gap
+            1024: { slidesPerView: 2, spaceBetween: 5 }, // Desktop: Minimum gap
+          }}
+          className="testimonial-slider"
+        >
+          {testimonials.map((testimonial) => (
+            <SwiperSlide key={testimonial.id} className="testimonial-slide">
+              <img
+                src={testimonial.image}
+                alt="Testimonial"
+                className="testimonial-img"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </div>
   );
 };
 
-export default Testimonials;
+export default TestimonialCarousel;

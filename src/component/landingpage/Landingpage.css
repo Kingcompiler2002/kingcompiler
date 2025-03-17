@@ -7,7 +7,7 @@
 }
 @media (max-width: 768px) {
   .landing-page {
-    padding-top: 70px; /* Increased padding for mobile */
+    padding-top: 120px; /* Increased padding for mobile */
   }
 }
 
@@ -17,6 +17,7 @@
   font-weight: bold;
   width: 300px;
   margin: auto;
+  margin-top: 10%;
   font-size: larger;
   display: none;
   margin-bottom: 3%;
@@ -26,7 +27,9 @@
 }
 @media (max-width: 768px) {
   .mobile-only-btn {
+    position: fixed; /* Fixed position */
     display: block; /* Visible on mobile */
+    top: 60px;
   }
 }
 
@@ -47,7 +50,7 @@
 .carousel-container {
   width: 500px; /* Fixed width for carousel */
   height: 500px; /* Fixed height */
-  margin: 20px auto 0;
+  margin: 70px auto 0;
   border-radius: 10px; /* Optional rounded corners */
   overflow: hidden; /* Hide overflow content */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */

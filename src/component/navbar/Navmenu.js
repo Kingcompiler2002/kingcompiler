@@ -5,22 +5,36 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "bootstrap/dist/css/bootstrap.min.css"; // Ensure Bootstrap is imported
 import "./Navbar.css";
+import logo from "./../../assets/logo.png";
 
 function Navmenu() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary fixed-top shadow-sm">
-      <Container>
-        {/* Logo aligned to the left */}
-        <Navbar.Brand href="#home" className="fw-bold">
-          KingCompiler
-        </Navbar.Brand>
+      <Container className="d-flex justify-content-between align-items-center">
+        {/* Left Section (Logo & Courses Dropdown) */}
+        <div className="d-flex align-items-center">
+          <Navbar.Brand href="#home" className="fw-bold">
+            <img src={logo} alt="logo" width="120" height="70" />
+          </Navbar.Brand>
+          <NavDropdown title="Courses" id="courses-dropdown" className="ms-3">
+            <NavDropdown.Item href="#course1" className="nav-dropdown-item">
+              Chess
+            </NavDropdown.Item>
+            <NavDropdown.Item href="#course2" className="nav-dropdown-item">
+              Coding
+            </NavDropdown.Item>
+            <NavDropdown.Item href="#course3" className="nav-dropdown-item">
+              Art & Craft
+            </NavDropdown.Item>
+          </NavDropdown>
+        </div>
 
         {/* Navbar toggle for mobile */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-        {/* Menu aligned to the right */}
+        {/* Center and Right-Aligned Menu Items */}
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto align-items-center">
+          <Nav className="w-100 d-flex justify-content-center align-items-center gap-3">
             <Nav.Link href="#about">
               <h5 className="custom-nav-btn">About Us</h5>
             </Nav.Link>
@@ -29,11 +43,23 @@ function Navmenu() {
             </Nav.Link>
             <NavDropdown
               title={
-                <span className="dropdown-title custom-nav-btn">Material</span>
+                <span
+                  className="dropdown-title custom-nav-btn"
+                  style={{
+                    fontSize: 17,
+                    display: "inline",
+                    margin: 0,
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginTop: "-10px",
+                  }}
+                >
+                  Material
+                </span>
               }
               id="basic-nav-dropdown"
             >
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#store">Store</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>
@@ -46,16 +72,33 @@ function Navmenu() {
             <Nav.Link href="#contact">
               <h5 className="custom-nav-btn">Contact Us</h5>
             </Nav.Link>
+            <Nav.Link href="#privacy">
+              <h5 className="custom-nav-btn">Privacy & Refund Policy</h5>
+            </Nav.Link>
 
-            {/* Styled button for "Take a Free Class!" */}
-            <Nav.Link href="#free-class" className="ms-2">
-              <button className="btn btn-danger btn-sm rounded-pill px-3">
-                <h5 className="mb-0 text-white">Take a Free Class!</h5>
+            {/* Buttons */}
+            <Nav.Link href="#free-class">
+              <button
+                className="btn btn-sm rounded-pill px-3"
+                style={{
+                  backgroundColor: "#F6C61A",
+                  color: "black",
+                  fontWeight: "bold",
+                }}
+              >
+                <h5 className="mb-0">Take a Free Class!</h5>
               </button>
             </Nav.Link>
-            <Nav.Link href="#free-class" className="ms-2">
-              <button className="btn btn-danger btn-sm rounded-pill px-3">
-                <h5 className="mb-0 text-white">Login</h5>
+            <Nav.Link href="#login">
+              <button
+                className="btn  btn-sm rounded-pill px-3"
+                style={{
+                  backgroundColor: "#F6C61A",
+                  color: "black",
+                  fontWeight: "bold",
+                }}
+              >
+                <h5 className="mb-0 ">Login</h5>
               </button>
             </Nav.Link>
           </Nav>
