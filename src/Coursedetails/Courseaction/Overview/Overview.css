@@ -1,0 +1,48 @@
+/* Overview.css */
+.detail-box {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.text-muted {
+  font-weight: bold;
+  font-size: 12px;
+}
+.text-item {
+  font-weight: bold;
+  font-size: 15px;
+  color: #6c757d;
+}
+.text-color {
+  color: rgb(146, 4, 4);
+}
+.detail-box:hover {
+  transform: scale(1.05);
+}
+
+.icon-container {
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-img {
+  width: 60px;
+  height: 60px;
+}
+
+@media (max-width: 768px) {
+  .detail-box {
+    margin-bottom: 15px;
+  }
+
+  .icon-container {
+    width: 50px;
+    height: 50px;
+  }
+}

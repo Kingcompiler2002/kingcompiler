@@ -50,9 +50,15 @@
 
 .nav-dropdown-item {
   font-weight: bold;
-  padding-bottom: 5px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+
   border-bottom: 2px solid transparent;
   transition: border-bottom 0.3s ease-in-out;
+  border-bottom: 1px solid #e9dac8;
+  display: "inline-block";
+
+  margin: 0 auto; /* Center the border */
 }
 
 .nav-dropdown-item:hover {

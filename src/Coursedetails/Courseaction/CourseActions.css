@@ -1,0 +1,80 @@
+/* CourseActions.css */
+.course-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.course-actions-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Add 20px gap between buttons */
+}
+
+.action-btn {
+  background-color: #ffffff;
+  width: 20%;
+
+  color: rgb(0, 0, 0);
+  padding: 15px 35px;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 30px; /* Rounded Corners */
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 10px 7px rgb(87, 80, 44);
+  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); Shadow Effect */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background-color 0.2s;
+}
+
+.action-btn:hover {
+  background-color: #f7c362;
+}
+
+.action-btn:active {
+  transform: scale(0.95);
+}
+
+/* Active button */
+.action-btn.active {
+  background-color: #ffc10e;
+}
+
+/* Content Section */
+.course-content {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .course-actions-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .action-btn {
+    width: 40%; /* Button width for mobile */
+    padding: 14px;
+    font-size: 14px;
+  }
+  .button-container {
+    flex-direction: row;
+    align-items: center; /* Center buttons in mobile */
+    gap: 10px; /* Adjust gap for mobile */
+  }
+}

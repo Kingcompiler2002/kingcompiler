@@ -3,9 +3,11 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css"; // Ensure Bootstrap is imported
 import "./Navbar.css";
 import logo from "./../../assets/logo.png";
+import { courses } from "../../data/coursedata"; // Import your course data
 
 function Navmenu() {
   return (
@@ -13,19 +15,21 @@ function Navmenu() {
       <Container className="d-flex justify-content-between align-items-center">
         {/* Left Section (Logo & Courses Dropdown) */}
         <div className="d-flex align-items-center">
-          <Navbar.Brand href="#home" className="fw-bold">
+          <Navbar.Brand href="/" className="fw-bold">
             <img src={logo} alt="logo" width="120" height="70" />
           </Navbar.Brand>
           <NavDropdown title="Courses" id="courses-dropdown" className="ms-3">
-            <NavDropdown.Item href="#course1" className="nav-dropdown-item">
-              Chess
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#course2" className="nav-dropdown-item">
-              Coding
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#course3" className="nav-dropdown-item">
-              Art & Craft
-            </NavDropdown.Item>
+            {courses.map((course) => (
+              <NavDropdown.Item
+                className="nav-dropdown-item"
+                style={{ fontWeight: "bold" }}
+                as={Link}
+                to={`/course/${course.id}`}
+                key={course.id}
+              >
+                {course.title}
+              </NavDropdown.Item>
+            ))}
           </NavDropdown>
         </div>
 

@@ -10,7 +10,12 @@ const FreeTrial = () => {
     <div className="free-trial-bg">
       <Container className="free-trial-section">
         {/* Section Heading */}
-        <h1 className="text-center section-heading">Our Offerings</h1>
+        <h1
+          style={{ fontFamily: "cursive", fontWeight: "bold" }}
+          className="text-center section-heading"
+        >
+          Our Offerings
+        </h1>
 
         <Row>
           {/* First Column - Free Trial Button & List */}
@@ -19,7 +24,7 @@ const FreeTrial = () => {
               Book a Free Trial
             </Button>
             <ul className="requirements-list">
-              <li>📱 A DEVICE: Laptop | Desktop | Tablet | Smartphone</li>
+              <li>📱 A DEVICE: Laptop | Desktop | Tablet | Smartphone </li>
               <li>🌍 Good internet connection</li>
               <li>📚 Willingness to learn & play</li>
             </ul>
