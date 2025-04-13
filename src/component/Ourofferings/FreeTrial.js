@@ -11,7 +11,7 @@ const FreeTrial = () => {
       <Container className="free-trial-section">
         {/* Section Heading */}
         <h1
-          style={{ fontFamily: "cursive", fontWeight: "bold" }}
+          style={{ fontWeight: "bold" }}
           className="text-center section-heading"
         >
           Our Offerings
@@ -21,7 +21,7 @@ const FreeTrial = () => {
           {/* First Column - Free Trial Button & List */}
           <Col md={4} className="free-trial-left">
             <Button style={{ marginBottom: 80 }} className="trial-btn">
-              Book a Free Trial
+              Book a Free Demo Class
             </Button>
             <ul className="requirements-list">
               <li>📱 A DEVICE: Laptop | Desktop | Tablet | Smartphone </li>

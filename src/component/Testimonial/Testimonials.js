@@ -22,6 +22,9 @@ const TestimonialCarousel = () => {
   return (
     <div className="testimonial-container">
       <h2 className="testimonial-heading">Our Achievers</h2>
+      <h2 className="testimonial-subheading">
+        Trusted by 5,000+ students across 10+ countries.
+      </h2>
       <div className="testimonial-wrapper">
         <Swiper
           modules={[Autoplay, Pagination]}

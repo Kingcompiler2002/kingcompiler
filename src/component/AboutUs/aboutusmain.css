@@ -1,0 +1,120 @@
+/* Typography & Base */
+.li-value {
+  font-family: "Montserrat SemiBold", sans-serif;
+  color: #791104;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.key-feature li {
+  font-family: "Montserrat SemiBold", sans-serif;
+  color: #070707;
+  font-size: 15px;
+  font-weight: normal;
+}
+.bg-img {
+  opacity: 0.8;
+}
+.our-mission {
+  background-image: url("https://i.postimg.cc/cHKhwCVz/bg-img.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.our-mission::before {
+  content: counter(name);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(31, 30, 30, 0.6); /* Glass effect overlay */
+  backdrop-filter: blur(2px); /* Blur effect */
+  z-index: 1;
+}
+
+.our-mission > * {
+  position: relative;
+  z-index: 2; /* Ensure content is above the overlay */
+}
+.instagram-embed iframe {
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+/* Sections */
+.about-section {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.about-section:hover {
+  transform: scale(1.01);
+}
+
+.about-us-section {
+  padding-top: 100px; /* Increased padding to ensure it clears the navmenu */
+}
+
+/* Global Flag Scroller */
+.flag-marquee {
+  position: relative;
+  height: 80px;
+  overflow: hidden;
+}
+
+.scrolling-flags {
+  display: flex;
+  animation: scrollFlags 25s linear infinite;
+  white-space: nowrap;
+}
+
+.flag-marquee .scrolling-flags div {
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  white-space: nowrap;
+}
+
+.flag-marquee .scrolling-flags span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e3a8a;
+}
+
+/* Animation */
+@keyframes scrollFlags {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .flag-marquee {
+    height: 80px;
+  }
+
+  .scrolling-flags {
+    animation: scrollFlags 25s linear infinite;
+    flex-wrap: nowrap; /* prevent wrap on small screens */
+  }
+
+  .flag-marquee .scrolling-flags div {
+    margin-bottom: 0;
+  }
+}

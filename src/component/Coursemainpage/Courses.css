@@ -1,0 +1,36 @@
+.container h2 {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-weight: bolder;
+}
+.container .coursep {
+  font-family: "Montserrat SemiBold", sans-serif;
+  color: #555555;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.container h6 {
+  font-weight: normal;
+  font-size: 15px;
+  color: #555555;
+}
+.explore:hover {
+  color: #ffd700;
+  text-decoration: none;
+  background-color: #1a1a1a;
+  border-color: #ffd700;
+}
+
+.listing-li {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.listing-value {
+  font-family: "Montserrat SemiBold", sans-serif;
+
+  color: #000000;
+  font-size: 14px;
+  font-weight: 600;
+}

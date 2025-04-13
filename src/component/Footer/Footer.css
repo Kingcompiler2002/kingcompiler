@@ -1,0 +1,28 @@
+.footer-section li {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+}
+.footer-section p {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: #000000;
+}
+.footer-section h5 {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffffff;
+}
+.footer-section h4 {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffffff;
+}
+.logo-section {
+  text-align: left;
+  float: left;
+  color: #ffffff;
+}

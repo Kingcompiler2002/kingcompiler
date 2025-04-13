@@ -1,0 +1,33 @@
+.book-now-container {
+  background-color: #ffd700; /* Yellow background */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* Ensures full height coverage */
+  text-align: center;
+  z-index: 1000;
+  padding: 10px 0; /* Padding for spacing */
+}
+
+.book-now-button {
+  background-color: #ffd700;
+
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .book-now-container {
+    bottom: 20px; /* Adjusted for mobile view */
+    display: block; /* Visible only on mobile view */
+  }
+}
+
+@media (min-width: 769px) {
+  .book-now-container {
+    display: none; /* Hidden on larger screens */
+  }
+}

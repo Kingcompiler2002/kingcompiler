@@ -5,7 +5,7 @@ import "./WhyUs.css"; // Import custom styling
 const whyUsData = [
   {
     id: 1,
-    title: "Expert Mentors",
+    title: "Expert Instructors",
     image: "https://i.postimg.cc/4yWT0hxQ/why-1.png",
   },
   {
@@ -20,7 +20,7 @@ const whyUsData = [
   },
   {
     id: 4,
-    title: "Personalized Learning Plans",
+    title: "Personalized Curriculum",
     image: "https://i.postimg.cc/0yMqtjR7/why-4.png",
   },
   {
@@ -33,7 +33,9 @@ const whyUsData = [
 const WhyUs = () => {
   return (
     <Container className="why-us-section">
-      <h2 className="text-center mb-4">Why Choose Us?</h2>
+      <h2 className="text-center mb-4" style={{ fontWeight: "bold" }}>
+        Why Choose Us?
+      </h2>
       <Row className="justify-content-center">
         {whyUsData.map((item) => (
           <Col key={item.id} md={2} sm={6} xs={12} className="why-us-col">

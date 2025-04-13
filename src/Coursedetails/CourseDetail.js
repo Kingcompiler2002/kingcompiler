@@ -6,6 +6,8 @@ import CourselandingPage from "./Coursecomponent/Courselandingpage";
 import AboutCourse from "./Aboutcourse/AboutCourse";
 import CourseActions from "./Courseaction/CourseActions";
 import { courses } from "../data/coursedata.js";
+import Whatsapp from "../socialchat/Whatsapp.js";
+
 const CourseDetail = () => {
   const { id } = useParams();
 
@@ -29,6 +31,7 @@ const CourseDetail = () => {
       <CourseActions course={course} />
 
       <Footer />
+      <Whatsapp />
     </>
   );
 };

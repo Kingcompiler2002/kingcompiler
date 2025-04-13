@@ -16,7 +16,7 @@ function Navmenu() {
         {/* Left Section (Logo & Courses Dropdown) */}
         <div className="d-flex align-items-center">
           <Navbar.Brand href="/" className="fw-bold">
-            <img src={logo} alt="logo" width="120" height="70" />
+            <img src={logo} alt="logo" width="160" height="35" />
           </Navbar.Brand>
           <NavDropdown title="Courses" id="courses-dropdown" className="ms-3">
             {courses.map((course) => (
@@ -39,7 +39,7 @@ function Navmenu() {
         {/* Center and Right-Aligned Menu Items */}
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="w-100 d-flex justify-content-center align-items-center gap-3">
-            <Nav.Link href="#about">
+            <Nav.Link href="/aboutus">
               <h5 className="custom-nav-btn">About Us</h5>
             </Nav.Link>
             <Nav.Link href="#blog">
@@ -50,12 +50,13 @@ function Navmenu() {
                 <span
                   className="dropdown-title custom-nav-btn"
                   style={{
-                    fontSize: 17,
+                    fontSize: 18,
                     display: "inline",
                     margin: 0,
                     alignItems: "center",
                     justifyContent: "center",
                     marginTop: "-10px",
+                    paddingTop: "-10px",
                   }}
                 >
                   Material
@@ -65,15 +66,15 @@ function Navmenu() {
             >
               <NavDropdown.Item href="#store">Store</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                Another action
+                Puzzles Room
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Annoucment</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#contact">
+            <Nav.Link href="/contactus">
               <h5 className="custom-nav-btn">Contact Us</h5>
             </Nav.Link>
             <Nav.Link href="#privacy">
@@ -90,7 +91,9 @@ function Navmenu() {
                   fontWeight: "bold",
                 }}
               >
-                <h5 className="mb-0">Take a Free Class!</h5>
+                <h5 style={{ fontWeight: "bold" }} className="mb-0">
+                  Take a Free Class!
+                </h5>
               </button>
             </Nav.Link>
             <Nav.Link href="#login">

@@ -1,0 +1,53 @@
+.syllabus-grid-container {
+  padding: 20px;
+}
+
+.syllabus-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.syllabus-card {
+  background: #f9f9f9;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.syllabus-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.syllabus-card h4 {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  margin-bottom: 10px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-weight: bold;
+}
+
+.syllabus-card h6 {
+  background-color: #ffd700;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 13px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #252802;
+
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.syllabus-list {
+  font-size: 13px;
+  font-weight: bold;
+}

@@ -1,0 +1,12 @@
+/* .my-3 {
+  width: 400px;
+  margin: auto;
+} */
+.learning-map-box {
+  max-width: 600px; /* adjust width as needed */
+  margin: 0 auto; /* center it */
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,36 @@
+.box-card {
+  height: 200px;
+  width: 400px;
+}
+.parent-review-carousel {
+  background-color: #fdfdfd;
+  padding: 40px 20px;
+}
+
+.review-box {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.review-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-text {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.review-course {
+  color: #555;
+  font-size: 14px;
+}

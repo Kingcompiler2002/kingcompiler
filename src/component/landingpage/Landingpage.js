@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import BookingForm from "../BookingForm";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Landingpage.css";
@@ -10,48 +11,63 @@ import img4 from "./img4.png";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 
 const LandingPage = () => {
+  const [showForm, setShowForm] = useState(false);
+
   return (
     <div className="container">
-      <div
-        className="row align-items-center landing-page "
-        style={{ minHeight: "70vh", marginTop: "20px" }}
-      >
+      <div className="row align-items-center landing-page ">
         {/* Left Side: Title and Button */}
         <div className="col-md-6 text-center text-md-start">
-          <h1 className="display-2 fw-bold">
-            #1 Live Online Extra- Curricular Courses
+          <h1 className="display-2 fw-bold head-1">
+            #1 Live Online Coding, Chess & Creative Courses for Kids & Teens
           </h1>
           <p className="lead">
-            <h4 style={{ fontStyle: "italic", color: "#909090" }}>
-              Member of the United States Chess Federation
+            <h4>
+              Learn from expert mentors in fun, interactive, and personalized
+              classes that build real-world skills for the future.
               <br />
-              <span style={{ fontStyle: "italic", color: "#909090" }}>
+              <span
+                style={{
+                  color: "#124E79",
+                  fontWeight: "bold",
+                }}
+              >
                 All Fide Certified Coaches
               </span>
             </h4>
           </p>
           <button
-            style={{ backgroundColor: "#FFC10E", textAlign: "center" }}
+            style={{ backgroundColor: "#FFD700", textAlign: "center" }}
             className="btn  btn-lg"
+            onClick={() => setShowForm(true)}
           >
-            <h3 style={{}}>BOOK A FREE DEMO</h3>
+            <h3
+              style={{
+                fontWeight: "bolder",
+                paddingTop: "2%",
+                color: "#1A1A1A",
+              }}
+            >
+              BOOK A FREE DEMO
+            </h3>
           </button>{" "}
           <br />
           <button
             style={{
-              backgroundColor: "#786349",
+              backgroundColor: "#1A1A1A",
               marginTop: "10px",
-              color: "white",
+              color: "#FFD700",
               textAlign: "center",
+              paddingTop: "2%",
             }}
-            className="btn  btn-sm"
+            className="btn  btn-sm btn-outline-warning"
             onClick={() => {
               const section = document.getElementById("courses-section");
               if (section) section.scrollIntoView({ behavior: "smooth" });
             }}
           >
             <h3>
-              Courses <MdKeyboardDoubleArrowDown />
+              Explore Courses <MdKeyboardDoubleArrowDown />
             </h3>
           </button>
         </div>
@@ -61,15 +77,11 @@ const LandingPage = () => {
           {/* Carousel Slider */}
           <Carousel
             className="carousel-container"
-            interval={2000}
+            interval={3000}
             pause={false}
           >
             <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="https://i.postimg.cc/0QBMRHwy/img1.png"
-                alt="First slide"
-              />
+              <img className="d-block w-100" src={banner} alt="First slide" />
             </Carousel.Item>
 
             <Carousel.Item>
@@ -85,6 +97,14 @@ const LandingPage = () => {
           </Carousel>
         </div>
       </div>
+
+      {/* Google Form Popup */}
+      {showForm && (
+        <BookingForm
+          formUrl="https://forms.gle/AF7PwKJHWqWm94Sv5"
+          onClose={() => setShowForm(false)}
+        />
+      )}
     </div>
   );
 };

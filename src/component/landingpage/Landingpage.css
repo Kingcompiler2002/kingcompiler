@@ -1,3 +1,8 @@
+.landing-page {
+  min-height: 70vh;
+  margin-top: 20px;
+}
+
 .dropdown-title {
   font-size: 1.4rem; /* Adjust size as needed */
   font-weight: bold; /* Optional: make it bold */
@@ -5,9 +10,16 @@
 .img-fluid {
   padding-top: 4%;
 }
+
+.head-1 {
+  padding-top: 10%;
+}
 @media (max-width: 768px) {
   .landing-page {
     padding-top: 120px; /* Increased padding for mobile */
+  }
+  .head-1 {
+    padding-top: 1%;
   }
 }
 
@@ -56,11 +68,35 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
+.container {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-weight: bold;
+}
+.container h1 {
+  font-size: 50px;
+  margin-bottom: 20px; /* Space below the heading */
+}
+.container h4 {
+  color: #555555;
+  font-size: 20px;
+  font-weight: bold;
+}
 /* Responsive Design */
 @media (max-width: 576px) {
   .carousel-container {
     width: 100%; /* Full width on mobile */
     height: auto; /* Adjust height automatically */
+  }
+  .container h1 {
+    font-size: 30px;
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  .container h4 {
+    font-size: 15px;
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  .landing-page {
+    min-height: 40vh;
   }
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col } from "react-bootstrap";
+import "./Footer.css"; // Import your CSS file for styling
 import {
   FaFacebook,
   FaTwitter,
@@ -14,14 +15,14 @@ import logo1 from "../../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-light py-4 mt-5">
+    <footer className="bg-dark text-light py-4 mt-5 footer-section">
       <Container>
         <Row>
           {/* Logo and About Section */}
-          <Col md={4} className="mb-3 text-center text-md-start">
+          <Col md={4} className="mb-3 text-md-start logo-section">
             <h4>Kingcompiler</h4>
             <p style={{ color: "white", fontStyle: "italic" }}>
-              School of Imagination!
+              Where Kings are Made!
             </p>
             <img
               src={logo1}
@@ -74,7 +75,7 @@ const Footer = () => {
             <div className="d-flex align-items-center mb-2">
               <FaEnvelope className="me-2" />
               <p style={{ color: "white" }} className="mb-0">
-                support@creatonation.com
+                support@kingcompiler.com
               </p>
             </div>
             <div className="d-flex align-items-center mb-2">
@@ -103,23 +104,38 @@ const Footer = () => {
             </div>
 
             <div className="mt-3">
-              <a href="https://facebook.com" className="text-light me-3 fs-5">
+              <a
+                href="https://www.facebook.com/kingcompiler.official/"
+                className="text-light me-3 fs-5"
+              >
                 <FaFacebook />
               </a>
               <a href="https://twitter.com" className="text-light me-3 fs-5">
                 <FaTwitter />
               </a>
-              <a href="https://instagram.com" className="text-light me-3 fs-5">
+              <a
+                href="https://www.instagram.com/kingcompiler.official/"
+                className="text-light me-3 fs-5"
+              >
                 <FaInstagram />
               </a>
-              <a href="https://linkedin.com" className="text-light fs-5">
+              <a
+                href="https://www.linkedin.com/company/kingcompiler/"
+                className="text-light fs-5"
+              >
                 <FaLinkedin />
               </a>
             </div>
           </Col>
         </Row>
 
-        <hr className="border-light" />
+        <hr
+          className="border-light mx-auto"
+          style={{
+            borderTop: "1px solid rgba(255, 255, 255, 0.5)",
+            width: "80%",
+          }}
+        />
 
         <p style={{ color: "white" }} className="text-center mb-0">
           &copy; {new Date().getFullYear()} Kingcompiler. All rights reserved.

@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./CourselandingPage.css";
+import BookingForm from "../../component/BookingForm";
 
 const CourselandingPage = ({ courses, courseId }) => {
+  const [showForm, setShowForm] = useState(false);
   const [currency, setCurrency] = useState("INR");
   const [exchangeRate, setExchangeRate] = useState(1);
   const [symbol, setSymbol] = useState("₹");
@@ -76,6 +78,7 @@ const CourselandingPage = ({ courses, courseId }) => {
             padding: "12px 24px", // More padding
             borderRadius: "8px", // Rounded corners
           }}
+          onClick={() => setShowForm(true)}
         >
           Book a Free Trial Class
         </button>
@@ -105,7 +108,10 @@ const CourselandingPage = ({ courses, courseId }) => {
         />
       </div>
       <div className="box-1">
-        <button className="btn btn-danger fixed-mobile-btn">
+        <button
+          className="btn btn-danger fixed-mobile-btn"
+          onClick={() => setShowForm(true)}
+        >
           Book a Free Trial Class
         </button>
         <h6 className="mobile-info-text">
@@ -116,6 +122,13 @@ const CourselandingPage = ({ courses, courseId }) => {
           {convertedDemoPrice} for the Demo class 100% free
         </h6>
       </div>
+      {/* Google Form Popup */}
+      {showForm && (
+        <BookingForm
+          formUrl="https://forms.gle/AF7PwKJHWqWm94Sv5"
+          onClose={() => setShowForm(false)}
+        />
+      )}
     </div>
   );
 };
