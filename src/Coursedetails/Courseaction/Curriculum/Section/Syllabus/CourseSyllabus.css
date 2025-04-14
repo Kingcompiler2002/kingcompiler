@@ -51,3 +51,22 @@ hr {
   font-size: 13px;
   font-weight: bold;
 }
+
+.custom-arrow {
+  background-color: black;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-size: 60% 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+}
+
+.carousel-control-prev-icon.custom-arrow {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5 0L1 4l4 4V0z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon.custom-arrow {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M3 0l4 4-4 4V0z'/%3E%3C/svg%3E");
+}

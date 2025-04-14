@@ -1,5 +1,1 @@
-/* Redirect all routes to index.html */
-/* This ensures React Router works on Netlify */
-/* Example: /aboutus -> index.html */
-/* Add the following rule: */
-/*    / *    /index.html   200 */
+/*    /index.html   200

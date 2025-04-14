@@ -39,9 +39,9 @@ function Navmenu() {
         {/* Center and Right-Aligned Menu Items */}
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="w-100 d-flex justify-content-center align-items-center gap-3">
-            <Nav.Link href="/aboutus">
+            <Link to="/aboutus" className="nav-link">
               <h5 className="custom-nav-btn">About Us</h5>
-            </Nav.Link>
+            </Link>
             <Nav.Link href="#blog">
               <h5 className="custom-nav-btn">Blog</h5>
             </Nav.Link>
@@ -74,9 +74,9 @@ function Navmenu() {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="/contactus">
+            <Link to="/contactus" className="nav-link">
               <h5 className="custom-nav-btn">Contact Us</h5>
-            </Nav.Link>
+            </Link>
             <Nav.Link href="#privacy">
               <h5 className="custom-nav-btn">Privacy & Refund Policy</h5>
             </Nav.Link>
