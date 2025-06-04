@@ -1,118 +1,71 @@
-import React from "react";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import { Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css"; // Ensure Bootstrap is imported
-import "./Navbar.css";
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
+import MenuItem from "@mui/material/MenuItem";
+import AdbIcon from "@mui/icons-material/Adb";
 import logo from "./../../assets/logo.png";
-import { courses } from "../../data/coursedata"; // Import your course data
+
+const pages = [
+  "Courses",
+  "About Us",
+  "Blog",
+  "Meterials",
+  "Contact Us",
+  "Privacy Policy",
+];
+const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Navmenu() {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const handleClose = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorEl(null);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
+
   return (
-    <Navbar expand="lg" className="bg-body-tertiary fixed-top shadow-sm">
-      <Container className="d-flex justify-content-between align-items-center">
-        {/* Left Section (Logo & Courses Dropdown) */}
-        <div className="d-flex align-items-center">
-          <Navbar.Brand href="/" className="fw-bold">
-            <img src={logo} alt="logo" width="160" height="35" />
-          </Navbar.Brand>
-          <NavDropdown title="Courses" id="courses-dropdown" className="ms-3">
-            {courses.map((course) => (
-              <NavDropdown.Item
-                className="nav-dropdown-item"
-                style={{ fontWeight: "bold" }}
-                as={Link}
-                to={`/course/${course.id}`}
-                key={course.id}
-              >
-                {course.title}
-              </NavDropdown.Item>
+    <AppBar position="static" style={{ backgroundColor: "#ffd700" }}>
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <img
+            src={logo}
+            alt="Logo"
+            style={{ width: "160px", height: "35px", marginRight: "10px" }}
+          />
+
+          <Box
+            sx={{ display: { xs: 'none', md: 'flex' }, alignItems: "center", textAlign: "center" }}
+          >
+            {pages.map((page) => (
+              <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <Typography sx={{ textAlign: "center" }}>{page}</Typography>
+              </MenuItem>
             ))}
-          </NavDropdown>
-        </div>
-
-        {/* Navbar toggle for mobile */}
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-
-        {/* Center and Right-Aligned Menu Items */}
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="w-100 d-flex justify-content-center align-items-center gap-3">
-            <Link to="/aboutus" className="nav-link">
-              <h5 className="custom-nav-btn">About Us</h5>
-            </Link>
-            <Nav.Link href="#blog">
-              <h5 className="custom-nav-btn">Blog</h5>
-            </Nav.Link>
-            <NavDropdown
-              title={
-                <span
-                  className="dropdown-title custom-nav-btn"
-                  style={{
-                    fontSize: 18,
-                    display: "inline",
-                    margin: 0,
-                    alignItems: "center",
-                    justifyContent: "center",
-                    marginTop: "-10px",
-                    paddingTop: "-10px",
-                  }}
-                >
-                  Material
-                </span>
-              }
-              id="basic-nav-dropdown"
-            >
-              <NavDropdown.Item href="#store">Store</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Puzzles Room
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Annoucment</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Link to="/contactus" className="nav-link">
-              <h5 className="custom-nav-btn">Contact Us</h5>
-            </Link>
-            <Nav.Link href="#privacy">
-              <h5 className="custom-nav-btn">Privacy & Refund Policy</h5>
-            </Nav.Link>
-
-            {/* Buttons */}
-            <Nav.Link href="#free-class">
-              <button
-                className="btn btn-sm rounded-pill px-3"
-                style={{
-                  backgroundColor: "#F6C61A",
-                  color: "black",
-                  fontWeight: "bold",
-                }}
-              >
-                <h5 style={{ fontWeight: "bold" }} className="mb-0">
-                  Take a Free Class!
-                </h5>
-              </button>
-            </Nav.Link>
-            <Nav.Link href="#login">
-              <button
-                className="btn  btn-sm rounded-pill px-3"
-                style={{
-                  backgroundColor: "#F6C61A",
-                  color: "black",
-                  fontWeight: "bold",
-                }}
-              >
-                <h5 className="mb-0 ">Login</h5>
-              </button>
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+          </Box>
+        </Toolbar>
       </Container>
-    </Navbar>
+    </AppBar>
   );
 }
-
 export default Navmenu;

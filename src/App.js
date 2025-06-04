@@ -2,7 +2,7 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 import Home from "./Home";
 import CourseDetail from "../src/Coursedetails/CourseDetail";
-import AboutUs from "./component/AboutUs/AboutUsMain.js";
+import AboutUs from "./component/AboutUs/aboutusmain.js";
 import ContactUs from "./component/ContactUs/contactus.js";
 
 function App() {
